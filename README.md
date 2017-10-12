@@ -6,11 +6,11 @@ All bindings were done against SFML 2.4, however some classes may be left out or
 
 ## Modules
 
-[Audio](https://github.com/IceDragon200/mruby-sfml-audio)
-[Graphics](https://github.com/IceDragon200/mruby-sfml-graphics)
-[Network](https://github.com/IceDragon200/mruby-sfml-network)
-[System](https://github.com/IceDragon200/mruby-sfml-system)
-[Window](https://github.com/IceDragon200/mruby-sfml-window)
+- [Audio](https://github.com/IceDragon200/mruby-sfml-audio)
+- [Graphics](https://github.com/IceDragon200/mruby-sfml-graphics)
+- [Network](https://github.com/IceDragon200/mruby-sfml-network)
+- [System](https://github.com/IceDragon200/mruby-sfml-system)
+- [Window](https://github.com/IceDragon200/mruby-sfml-window)
 
 ## Retrieving SFML version
 
