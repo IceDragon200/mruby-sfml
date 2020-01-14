@@ -2,6 +2,8 @@
 #include <mruby/class.h>
 #include <SFML/Config.hpp>
 
+#define MRB_SFML_EXTERN extern "C"
+
 MRB_SFML_EXTERN void
 mrb_mruby_sfml_gem_init(mrb_state* mrb)
 {

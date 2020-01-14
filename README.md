@@ -27,3 +27,33 @@ SFML::VERSION # => alias for SFML::Version::STRING
 ## Dependencies
 
 The gems do not specify any library or headers, as the user of the gems, you must manually include the libraries and headers in your mruby config.
+
+## Sample Build Config
+
+```ruby
+MRuby::Build.new do |conf|
+  if ENV['VisualStudioVersion'] || ENV['VSINSTALLDIR']
+    toolchain :visualcpp
+  else
+    toolchain :gcc
+  end
+
+  conf.gembox 'default'
+
+  conf.gem github: 'IceDragon200/mruby-sfml-audio'
+  conf.gem github: 'IceDragon200/mruby-sfml-graphics'
+  conf.gem github: 'IceDragon200/mruby-sfml-network'
+  conf.gem github: 'IceDragon200/mruby-sfml-system'
+  conf.gem github: 'IceDragon200/mruby-sfml-window'
+  conf.gem github: 'IceDragon200/mruby-sfml'
+
+  conf.linker do |linker|
+    linker.libraries.push('sfml-system')
+    linker.libraries.push('sfml-audio')
+    linker.libraries.push('sfml-graphics')
+    linker.libraries.push('sfml-window')
+    linker.libraries.push('sfml-system')
+    linker.libraries.push('sfml-network')
+  end
+end
+```
